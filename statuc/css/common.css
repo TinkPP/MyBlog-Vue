@@ -1,0 +1,188 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vw;
+    background: linear-gradient(125deg, #2c3e50, #16a085, #27ae60, #2980b9, #e74c3c, #8e44ad, #2c3e50);
+    /* background-image: url(../image/background.png);
+    background-repeat: no-repeat; */
+    background-size: 500%;
+    animation: bgAnimation 20s linear infinite alternate;
+}
+
+@keyframes bgAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+
+/* 版心 */
+
+.wrapper {
+    width: 1240px;
+    margin: 0 auto;
+}
+
+
+/* 导航 */
+
+nav {
+    margin-top: 360px;
+    /* background-color: black; */
+}
+
+nav .wrapper {
+    display: flex;
+    height: 60px;
+}
+
+nav .left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 940px;
+    height: 60px;
+    padding: 0 16px;
+    background-color: #fff;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+nav .left li {
+    position: relative;
+    float: left;
+    width: 100px;
+    height: 60px;
+    transition: all .5s;
+    transform-style: preserve-3d;
+    /* transform: rotateX(-20deg) rotateY(30deg); */
+}
+
+nav .left li a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 18px;
+    color: #a56bba;
+    background-color: aqua;
+}
+
+nav .left li a:first-child {
+    background-color: #fff;
+    transform: translateZ(30px);
+}
+
+nav .left li a:last-child {
+    background-color: #a56bba;
+    color: #fff;
+    transform: rotateX(90deg) translateZ(30px);
+}
+
+nav .left li:hover {
+    transform: rotateX(-90deg);
+}
+
+nav .left input {
+    margin-left: 100px;
+    padding-left: 15px;
+    height: 36px;
+    width: 300px;
+    background-color: #f3f5f7;
+    border-radius: 8px;
+}
+
+nav .right {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    /* overflow: hidden; */
+}
+
+nav .right .first,
+nav .right .last {
+    width: 50px;
+    height: 100%;
+    background-color: #fff;
+    border-top-right-radius: 8px;
+}
+
+nav .right .last {
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+nav .right .photo_frame {
+    position: absolute;
+    left: 50px;
+    bottom: 20px;
+    width: 200px;
+    height: 180px;
+    /* background-color: #fff; */
+    /* background-image: radial-gradient( circle at 8px 192px, pink, pink 8px, red, red 8px); */
+    /* border-radius: 8px; */
+}
+
+nav .right .photo_frame .before,
+nav .right .photo_frame .after {
+    position: absolute;
+    bottom: 0;
+    width: 8px;
+    height: 8px;
+    /* background-color: #fff; */
+    transition: all 0.5s;
+}
+
+nav .right .photo_frame .before {
+    background-image: radial-gradient( circle at top right, transparent, transparent 8px, #fff, #fff 8px);
+}
+
+nav .right .photo_frame .after {
+    right: 0;
+    background-image: radial-gradient( circle at top left, transparent, transparent 8px, #fff, #fff 8px);
+}
+
+nav .right .photo_frame .photo {
+    margin: 0 20px;
+    width: 160px;
+    height: 160px;
+    background-color: #a56bba;
+    transition: all 0.1s;
+}
+
+nav .right .photo_frame .photo:hover {
+    border-radius: 50%;
+    transform: rotate(360deg);
+}
+
+nav .right .photo_frame .photo:hover+.before {
+    width: 32px;
+    height: 32px;
+    background-image: radial-gradient( circle at top right, transparent, transparent 32px, #fff, #fff 32px);
+}
+
+nav .right .photo_frame .photo:hover+.after {
+    width: 32px;
+    height: 32px;
+    background-image: radial-gradient( circle at top left, transparent, transparent 32px, #fff, #fff 32px);
+}
+
+
+/* 底部 */
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+    margin-top: 15px;
+}

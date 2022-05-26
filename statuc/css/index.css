@@ -1,0 +1,53 @@
+/* 中间内容 */
+
+main .wrapper {
+    display: flex;
+    margin-top: 15px;
+}
+
+main .left {
+    flex: 4;
+    margin-right: 15px;
+    background-color: #e3e5e7;
+    border-radius: 8px;
+}
+
+main .left .title {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+main .left .content {
+    margin-top: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+main .left .left_bottom {
+    margin-top: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+main .right {
+    flex: 1;
+    background-color: pink;
+    border-radius: 8px;
+}
+
+
+/* 底部 */
+
+.bottom {
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+}
+
+.c1 {
+    width: 200px;
+    height: 200px;
+    background-color: aquamarine;
+}
